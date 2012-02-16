@@ -1,0 +1,3 @@
+[submodule "/Users/jwilson/dotfiles/vim/bundle/solarized"]
+	path = /Users/jwilson/dotfiles/vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
