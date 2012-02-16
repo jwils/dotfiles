@@ -4,3 +4,6 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "/Users/jwilson/dotfiles/vim/bundle/powerline"]
+	path = /Users/jwilson/dotfiles/vim/bundle/powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
