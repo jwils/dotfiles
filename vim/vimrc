@@ -1,0 +1,198 @@
+" Set up mapleader
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+filetype on
+
+
+
+"swap ; and :"
+nnoremap ; :
+nnoremap : ;
+
+"setup folding
+set foldmethod=indent
+set foldlevel=99
+
+" Set how many lines of history to remember
+set history=1000
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+
+let mapleader = ","
+let g:maplead = ","
+
+"fast editing of .vimrcfile
+nnoremap <leader>e :e! ~/.vimrc<cr>
+
+"Changes to directory of file you are editing
+nnoremap <leader>cd :cd %:p:h<cr>
+nnoremap <leader>pp :setlocal paste!<cr>
+
+"Make jj work the same as escape
+:imap jj <Esc>
+
+nnoremap k gk
+nnoremap j gj
+
+
+set hidden
+
+filetype plugin on
+set ofu=syntaxcomplete#Complete
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"USER INTERFACE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Shows command while typing
+set showcmd
+
+"Makes sure ruler is visible
+set ruler
+
+" Set 7 lines to the curors - when moving vertical..
+set so=7
+
+set wildmenu "Turn on WiLd menu
+set wildmode=list:longest
+
+set cmdheight=2 "The commandbar height
+
+" Set backspace config
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+set showmatch "Show matching bracets when text indicator is over them
+set mat=2 "How many tenths of a second to blink
+
+" No sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+syntax on
+
+runtime macros/matchit.vim
+  """""""""""""""""""""""""""""""""""""
+  "SEARCH
+  """""""""""""""""""""""""""""""""""""
+  set ignorecase "Ignore case when searching
+  set smartcase
+
+  set hlsearch "Highlight search things
+
+  set incsearch "Make search act like search in modern browsers
+  set nolazyredraw "Don't redraw while executing macros 
+  
+  set magic "Set magic on, for regular expressions
+
+
+  """""""""""""""""""""""""""""""""""""
+  "TABS AND INDENTING
+  """""""""""""""""""""""""""""""""""""
+  set expandtab
+  set shiftwidth=2
+  set tabstop=2
+  set smarttab
+
+  "Set Filetype indenting
+  filetype indent on
+  
+  
+  "Shortcut for turning indending on and off
+  nnoremap <leader>si :setl si! ai! cin! inde= si?<cr>
+
+  
+  set lbr
+  set tw=500
+
+  set ai "Auto indent
+  set si "Smart indet
+  set cin
+  set wrap "Wrap lines
+
+  """""""""""""""""""""""""""""""""""""
+  "MOVING AROUND
+  """""""""""""""""""""""""""""""""""""
+  "MAKES MOVING BETWEEK BUFFERS EASIER
+  noremap <Right> <C-W>l<C-W>_<cr>
+  noremap <Left> <C-W>h<C-W>_<cr>
+  nnoremap <silent> <Up> :bn<cr>
+  nnoremap <silent> <Down> :bp<cr>
+  
+
+ 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Parenthesis/bracket expanding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+vnoremap $e <esc>`>a"<esc>`<i"<esc>
+
+" Map auto complete of (, ", ', [
+"inoremap $1 ()<esc>i
+"inoremap $2 []<esc>i
+"inoremap $3 {}<esc>i
+"inoremap $4 {<esc>o}<esc>O
+"inoremap $q ''<esc>i
+"inoremap $e ""<esc>i
+"inoremap $t <><esc>i
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Plugin Settings
+  """""""""""""""""""""""""""""""""""""
+  "POWER LINE SETTINGS
+  """""""""""""""""""""""""""""""""""""
+  set laststatus=2
+  let g:Powerline_symbols = 'fancy'
+
+  """""""""""""""""""""""""""""""""""""
+  "MINI BUFFER EXPLORER
+  """""""""""""""""""""""""""""""""""""
+  let g:miniBufExplMapWindowNavVim = 1
+  let g:miniBufExplMapWindowNavArrows = 1
+  let g:miniBufExplMapCTabSwitchBufs = 1
+  let g:miniBufExplModSelTarget = 1 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"FONTS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Enable filetype plugin
+filetype plugin on
+filetype on
+set shell=/bin/zsh
+
+set nonu
+
+set guifont=Menlo\ Regular\ for\ Powerline
+
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"FILE TYPE SPECIFICS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+
+  """""""""""""""""""""""""""""""""""""
+  "PYTHON
+  """""""""""""""""""""""""""""""""""""
+  autocmd BufWrite *.py :call DeleteTrailingWS()

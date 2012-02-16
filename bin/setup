@@ -1,0 +1,6 @@
+cd ~
+ln dotfiles/vim/vimrc .vimrc
+ln dotfiles/vim/gvimrc .gvimrc
+ln dotfiles/zsh/zshrc .zshrc
+
+cd -

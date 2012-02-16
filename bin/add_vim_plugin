@@ -1,0 +1,11 @@
+#! /bin/bash
+
+
+# $1 is the url of the plugin
+# $2 is the name of the folder to put it in
+
+cd ~/dotfiles/
+git submodule add $1 ~/dotfiles/vim/bundle/$2
+git add .
+git commit -m "Installed the $2 plugin"
+cd -
