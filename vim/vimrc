@@ -9,10 +9,8 @@ filetype on
 "swap ; and :"
 nnoremap ; :
 nnoremap : ;
-
 "setup folding
-set foldmethod=indent
-set foldlevel=99
+set foldmethod=manual
 
 " Set how many lines of history to remember
 set history=1000
