@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/jwilson/dotfiles/vim'
+let g:netrw_dirhist_2='/Users/jwilson/dotfiles/vim/autoload'
+let g:netrw_dirhist_3='/Users/jwilson/Documents/Classes/CIS555/submit-hw1'
+let g:netrw_dirhist_4='/Users/jwilson/dotfiles'
+let g:netrw_dirhist_5='/Users/jwilson/Documents/Classes/CIS553'
+let g:netrw_dirhist_6='/Users/jwilson/Documents/Classes/CIS553/cis553_proj1'
+let g:netrw_dirhist_7='/Users/jwilson/dotfiles/zsh/oh-my-zsh/plugins'
+let g:netrw_dirhist_8='/Users/jwilson/dotfiles/zsh/oh-my-zsh/plugins/git'

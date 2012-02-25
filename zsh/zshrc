@@ -46,5 +46,5 @@ function ssh_spec() {
   echo $RANDOM
   ssh -t -A eniac ssh -A `printf "spec%02d\n"  $[${RANDOM}%49 + 1]`
 }
-export JAVA_HOME=/Library/Java/Home
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+export JAVA_HOME=/Library/Java/Home

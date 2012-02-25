@@ -7,3 +7,6 @@
 [submodule "/Users/jwilson/dotfiles/vim/bundle/powerline"]
 	path = /Users/jwilson/dotfiles/vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "/Users/jwilson/dotfiles/vim/bundle/coffee-script-syntax"]
+	path = /Users/jwilson/dotfiles/vim/bundle/coffee-script-syntax
+	url = https://github.com/kchmck/vim-coffee-script.git
