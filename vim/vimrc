@@ -18,6 +18,8 @@ set history=1000
 " Set to auto read when a file is changed from the outside
 set autoread
 
+" Store swap files in fixed location, not current directory.
+set dir=~/.vimswap//,/var/tmp//,/tmp//,."
 
 let mapleader = ","
 let g:maplead = ","
@@ -28,6 +30,9 @@ nnoremap <leader>e :e! ~/.vimrc<cr>
 "Changes to directory of file you are editing
 nnoremap <leader>cd :cd %:p:h<cr>
 nnoremap <leader>pp :setlocal paste!<cr>
+nnoremap <leader>h :tabp<cr>
+nnoremap <leader>l :tabn<cr>
+nnoremap <leader>e :tabe 
 
 "Make jj work the same as escape
 :imap jj <Esc>

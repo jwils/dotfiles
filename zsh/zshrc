@@ -48,3 +48,16 @@ function ssh_spec() {
 }
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 export JAVA_HOME=/Library/Java/Home
+
+
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/:$PYTHONPATH
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+#### ADDED NPM 
+export PATH="/usr/local/share/npm/bin":$PATH
+alias rake="noglob rake"
