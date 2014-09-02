@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/jwils/Documents/Jobs/WCAI/app/views/project_files'
-let g:netrw_dirhist_2='/Users/jwils/Documents/Jobs/WCAI_Projects/WCAI/app/views/project_files'
-let g:netrw_dirhist_3='/Users/jwils/Documents/Classes/CIS195/calculator'
-let g:netrw_dirhist_4='/Users/jwils'
-let g:netrw_dirhist_5='/Users/jwils/Documents/Classes/CIS195/calculator'
-let g:netrw_dirhist_6='/Users/jwils/Documents/Classes/CIS195/calc-in-class'
-let g:netrw_dirhist_7='/Users/jwils/Documents/Classes/CIS195/calc-in-class/vendor/NUI'
